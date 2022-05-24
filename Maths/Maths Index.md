@@ -1,0 +1,4 @@
+# Maths Index
+---
+[[Polynomials]]
+[[Calculus]]
