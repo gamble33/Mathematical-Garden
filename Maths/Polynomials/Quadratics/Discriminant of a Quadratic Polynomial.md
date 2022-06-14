@@ -4,11 +4,18 @@
 ---
 
 #Todo make an interactive graph where you can play around with the coefficients $a$, $b$ and $c$ and see how it affects the discriminant and the graph.
-
-`jsx:<projects.graphics.MyButton name={"Felix"}/>`
-
-`jsx:<projects.graphics.QuizQuestion question={"Felix"} responses={["a", "b", "c"]}/>`
 ![[quadratic_polynomial_discriminant.png#invert_B]]
+
+```jsx:
+<projects.graphics.QuizQuestion 
+	question={"What is 34 + 35"}
+	responses={[
+	{ text: "35", correct: false },
+	{ text: "36", correct: false },
+	{ text: "69", correct: true }
+	]}
+/>
+```
 
 For a quadratic polynomial the discriminant is equal to $b^2-4ac$.
 

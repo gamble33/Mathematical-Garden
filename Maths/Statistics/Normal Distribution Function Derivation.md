@@ -1,13 +1,15 @@
 #Statistics #Maths 
 
-[^1]: The probability of 
 # Normal Distribution Function Derivation
 ---
 Imagine a scenario in which arrows are being shot at a target.
 ![[target.png#invert_B|400]]
 A few assumptions must be made about this scenario.
 ## Assumptions
-1. The probability densities of the orthogonal directions are independent. The error in the x-direction does not affect  the error in the y-direction.
+
+^e3137a
+
+1. The probability densities of the orthogonal directions are [[Independence|independent]]. The error in the x-direction does not affect  the error in the y-direction.
 2. Hitting the centre of the target is more likely than other points on the target. I.e., The centre of the target is being aimed at.
 3. The probability density is **rotationally invariant**, meaning, the distribution of where the arrow lands only depends on the distance of the arrow to the centre.
 
@@ -15,7 +17,7 @@ The position of any arrow on the target can be described as a cartesian coordina
 
 ![[target_axes.png#invert_B|500]]
 
-The probability of hitting any point on the target $\mathbb{P}(x,y)$ is equal to $\mathbb{P}(x)\times \mathbb{P}(y)$.
+The probability of hitting any point on the target $\mathbb{P}(x,y)$ is equal to $\mathbb{P}(x)\times \mathbb{P}(y)$ because of [[Normal Distribution Function Derivation#Assumptions|assumption 1]].
 
 #Todo Area on a arrow target diagram
 
