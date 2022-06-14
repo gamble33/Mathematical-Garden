@@ -1,6 +1,6 @@
 #Statistics #Maths 
 
-# Combining Variables 
+# Combining Random Variables 
 ---
 ---
 > [!Note]
