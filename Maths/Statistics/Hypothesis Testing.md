@@ -68,7 +68,7 @@ To **incorrectly** reject $H_0$ is known as a **Type I Error**. The probability 
 To **incorrectly** <u>accept</u> $H_0$ is known as a **Type II Error**
 
 ### Summary
-![[Pasted image 20220527151742.png|300]] #Todo
+![[Pasted image 20220527151742.png|500]] #Todo
 ## Summary
 1. Identify population parameter $\theta$ (use proportion $p$ in Binomial or mean rate $\lambda$ for a Poisson) you are going to test.
 2. Write $H_0$ and $H_1$. Consider whether test is one or two tailed.
