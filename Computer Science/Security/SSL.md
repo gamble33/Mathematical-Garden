@@ -1,0 +1,10 @@
+- Although SSL is referred to as a [[Network Protocol|protocol]], it is in fact a [[Network Protocol#Protocol Stack|protocol suite]].
+- There is a Record Protocol that deals with the format for data transmission.
+- There is also a Handshake Protocol responsible for security.
+- The operation of SLL happens without any action from the user.
+- The starting point for SSL implementation is a connection between the client and the server being established by [[TCP]].
+- The client browser then invokes the Handshake Protocol from the [[SSP]] suite.
+- The Handshake Protocol requests from the server its SSL certificate which is a digital certificate confirming its identity.
+- The server sends this SSL certificate plus its public key.
+- The browser uses this public key to encrypt a key which is to be used as a one-off sesion key for symmetric key encryption to be used for the data transferred during the session.
+- There may also be a need at this time to agree which ecnryption algorithms are to be used.

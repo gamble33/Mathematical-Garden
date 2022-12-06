@@ -1,6 +1,6 @@
 #Practical #Physics 
 
-# Criticising Results
+# Criticizing Results
 ---
 ![[results table.png#invert_B]]
 * Not all values are given to the same degree of [[Accuracy|accuracy]]; i.e., the values have inconsistent number of **significant figures**.

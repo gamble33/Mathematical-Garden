@@ -6,7 +6,7 @@
 
 ## Method
 1. Setup apparatus as shown.
-2. Determine the cross-sectional area of the metal wire with the use of a micrometre. Measure the diameter at perpendicular angles and take the arithmetic mean of the measurements. Then use formula $A=\pi (\frac{d}{2})^2$ to determine the area.
+2. Determine the cross-sectional area of the metal wire with the use of a micrometer. Measure the diameter at perpendicular angles and take the arithmetic mean of the measurements. Then use formula $A=\pi (\frac{d}{2})^2$ to determine the area.
 3. Measure the length of the copper wire with a ruler. Determine resistance in the metal wire with formula derived from Ohm's Law $R=\frac{V}{I}$. Obtain voltage and current by reading the voltmeter and ammeter respectively.
 4. Record the results of previous step, repeated at multiple different lengths.
 5. Plot a graph of length against resistance $R=\frac{\rho}{A}L$.

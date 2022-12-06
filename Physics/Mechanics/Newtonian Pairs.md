@@ -1,0 +1,3 @@
+- Occur at the same time.
+- Are of the same type.
+- Act on different bodies.

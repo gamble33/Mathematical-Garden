@@ -1,0 +1,1 @@
+$$\text{percentage uncertainty}=\frac{\text{uncertainty}}{\text{reading}}\times100$$
