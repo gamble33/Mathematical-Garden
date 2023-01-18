@@ -1,7 +1,9 @@
 #Physics 
 
 # Electric Potential
-Electric point at a given point is equal to the [[Work Done|work done]] per unit charge ($Q_1$) in bringing that unit positive charge from infinity to that point.
+[[Work Done|work done]] per unit charge ($Q$) in bringing that positive unit charge from infinity to that point.
+
+$$V=\frac{Q}{4\pi\varepsilon_0r}$$
 
 ## Absolute Electric Potential
 The potential energy per unit of charge for a positive point charge at its given position in an electric field.

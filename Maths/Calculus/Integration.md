@@ -143,6 +143,14 @@ Hope: make integral easier to solve.
 > $$=x\space\text{artanh}\space x + \frac 1 2 \ln{\left|1-x^2\right|}+C$$
 
 # Reduction Formulae
+The goal of the reduction formula is to create and inductive step that will transform a complicated integral into a integral with a reduced power in the hope that a process of induction can be used to calculate an arbitrarily high power.
+
+$$\int f_n(x)\ dx=g\left(\int f_{n-1}(x)\right)$$
+Where:
+* $f_n(x)$ is a function of $x$ that contains some constant $n$. (Generally in the power, i.e., $x^n$).
+
+The most common strategy is to integrate by parts which involves differentiating the term involving $n$.
+
 > [!Example]
 > integrate $\int x^4 e^x \space dx$
 >
@@ -178,3 +186,177 @@ Hope: make integral easier to solve.
 > $$=(n-1)\left[\int^{\frac \pi 2}_0 \sin^{n-2}dx-\int^{\frac \pi 2}_0 \sin^{n}dx\right]$$
 > $$=(n-1)\left[I_{n-2}-I_n\right]=I_n$$
 > $$I_n=\frac{I_{n-2}(n-1)}{n}$$
+
+# Arc Length
+$$S=\int ds $$
+Where:
+* $ds$ is a small section of the curve.
+* $S$ is the arc length.
+## $wrt \ dx$
+$$=\int \sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx$$
+
+## $wrt \ dy$
+$$S=\int \sqrt{1+\left(\frac{dx}{dy}\right)^2}\ dy$$
+
+## Parametrically ($wrt \ t$)
+$$=\int \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dx}\right)^2}\ dt$$
+
+## Intuition
+$$S=\int ds $$
+
+$$ds =\sqrt{(d x)^2+(d y)^2}$$
+![[Pasted image 20221208124814.png]]
+$$S=\int \sqrt{(d x)^2+(d y)}$$
+
+our function is likely to be determined by $x$ so we wish to integrate with respect to $x$. Therefore, we will need to find how the arc length changes with respect to $x$ ($\frac{ds}{dx}$), and integrate that term over $x$.
+
+$$S=\int \frac{ds}{dx}\ dx$$
+$$=\int \frac {1} {dx} \sqrt{(dx)^2+(dy)^2}\ dx$$
+$$=\int \sqrt{\frac{(dx)^2+(dy)^2}{(dx)^2}}\ dx$$
+$$=\int \sqrt{\frac{(dx)^2}{(dx)^2}+\frac{(dy)^2}{(dx)^2}}\ dx$$
+$$=\int \sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx$$
+
+However, it may be that we wish to find an arc length with respect to $y$. Therefore, we would need to use $\frac{ds}{dy}$ and integrate over $y$.
+
+$$S=\int \sqrt{1+\left(\frac{dx}{dy}\right)^2}\ dy$$
+
+Alternatively, our function may be defined parametrically and we would need to find an arc length in terms of a parameter $t$.
+
+$$=\int \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dx}\right)^2}\ dt$$
+
+> [!Example]
+> Find the exact arc length of the arc on the parabola with equation $y= \frac 1 2 x^2$, from the origin to the point $P(4,8)$.
+>  $$S^4_0=\int\limits^4_0 \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\ dx$$
+>  $$S^4_0=\int\limits^4_0 \sqrt{1 + (x)^2}\ dx$$
+> by substitution $x=\sinh{u}$,
+>  $$dx=\cosh{u}\times du$$
+>  $$u = \text{arsinh}\ x$$
+> Thus, the new limits are: $u=\ln{(4+\sqrt{17})}$ and $u=0$,
+>  $$S^4_0=\int\limits^{\ln{(4+\sqrt{17})}}_0 \sqrt{1 + \sinh^2 u}\ \cosh u\ du$$
+>  $$=\int\limits^{\ln{(4+\sqrt{17})}}_0 \cosh^2 u\ du$$
+>  $$=\frac 1 2\int\limits^{\ln{(4+\sqrt{17})}}_0 \cosh 2u+1\ du$$
+>  $$=\frac 1 2 \left[\frac12 \sinh{2u}+u\right]^{\ln{4+\sqrt{17}}}_0$$
+>  $$\vdots$$
+>  $$=\frac{(4+\sqrt{17})^2-\frac{1}{(4+\sqrt{17})^2}}{8}+\frac12\ln{(4+\sqrt{17})}$$
+> $$\vdots$$
+>  $$S^4_0=\frac 1 2 \ln{(4+\sqrt{17})}+2\sqrt {17}$$
+
+## Fun Fact
+> [!Example]
+> Find arc length of this circular arc:
+> ![[Pasted image 20221208130747.png]]
+> we know that this circular arc has the forumla $x^2+y^2=1$
+> \
+> \
+> It can be defined parametrically:
+> $$(\sin t, \cos t)$$
+> or
+> $$y=\cos t$$
+> $$x=\sin t$$
+> $$\frac {dy} {dt} = - \sin t$$ 
+> $$\frac {dx} {dt} = \cos t$$ 
+> the limits are ($t=0$ and $t=\frac \pi 2$)
+> $$S=\int\limits^{\frac \pi 2}_0 \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dx}\right)^2}\ dt$$
+> $$=\int\limits^{\frac \pi 2}_0 \sqrt{\left(\cos t\right)^2+\left(-\sin t\right)^2}\ dt$$
+> $$=\int\limits^{\frac \pi 2}_0 \sqrt{1}\ dt$$
+> $$=\int\limits^{\frac \pi 2}_0 1\ dt$$
+> $$=[t]^{\frac \pi 2}_0=\frac \pi 2 - 0$$
+> $$= \frac \pi 2$$
+
+> [!Error]
+> It is not possible to find the exact length of a general ellipse.
+> 
+> I wonder why...?
+
+# Surface Area of Revolution
+
+$$A = 2 \pi \int  y \sqrt{1+\left(\frac{dy}{dx}\right)^2} dx$$
+## Intuition
+
+$$A = \text {Surface Area of Revolution}$$
+
+![[Pasted image 20221212121843.png]]
+
+The surface area of revolution of a curve can be decomposed into a series of angled bands. These are similar to cylinders but are not cylinders. Each of these angled bands will be the curved surface area of a frustum.
+
+![[Pasted image 20221212122005.png]]
+
+The formula of the surface area of this frustum (highlighted green), $\delta A$,  will be...
+$$\delta A = BIG\ CONE - AMALL\ CONE$$
+$$\delta A = \pi l_2(y+\delta y) - \pi l_1 y$$
+$$l_1 = l_2 - \delta s$$
+$$\delta A = \pi l_2(y+\delta y) - \pi (l_2-\delta s) y$$
+$$\delta A = \pi \left( l_2y+l_2\delta y - l_2y + y\delta s \right)$$
+$$\delta A = \pi \left( l_2\delta y + y\delta s \right)$$
+
+![[Integration 2022-12-12 12.29.04.excalidraw]]
+
+$$\frac {l_2} {l_1} = \frac {y + \delta y} {y}$$
+$$\frac {l_2} {l_2-\delta s} = \frac {y + \delta y} {y}$$
+multiply both sides by $y(l_2-\delta s)$:
+$$yl_2 = (y + \delta y)(l_2-\delta s)$$
+$$yl_2 = yl_2 - y \delta s + l_2 \delta y - \delta y \delta s$$
+$$0 = - y \delta s + l_2 \delta y - \delta y \delta s$$
+$$y \delta s + \delta y \delta s = l_2 \delta y$$
+$$l_2=y \frac {\delta s} {\delta y} + \delta s$$
+
+$$\delta A = \pi\left[(y \frac {\delta s} {\delta y} + \delta s)\delta y + y \delta s\right]$$
+$$\delta A = \pi\left[y\delta s + \delta y \delta s + y \delta s\right]$$
+$$\delta A = \pi\delta s\left[y + \delta y + y \right]$$
+$$\delta A = \pi\delta s\left[2y + \delta y \right]$$
+$$\frac{\delta A}{\delta x} = \pi\delta s\left[2y + \delta y \right] \times \frac {1} {\delta x}$$
+$$\frac{\delta A}{\delta x} = \pi\frac{\delta s}{\delta x}\left[2y + \delta y \right]$$
+
+as $\delta x \to 0$, and $\delta y \to 0$,
+
+$\frac {\delta A} {\delta x} \to \frac {dA}{dx}$ and $\frac {\delta s} {\delta x} \to \frac {ds} {dx}$ 
+
+$$\pi\frac{\delta s}{\delta x}\left[2y + \delta y \right] \to 2 \pi y \frac {ds} {dx}$$
+
+$$A = \int \frac {dA}{dx}dx$$
+
+$$A = \int 2 \pi y \frac {ds} {dx} dx$$
+
+$$\frac{ds}{dx}=\sqrt{1+\left(\frac{dy}{dx}\right)^2}$$
+
+$$A = 2 \pi \int  y \sqrt{1+\left(\frac{dy}{dx}\right)^2} dx$$
+
+## Explicit Function
+> [!Example]
+> The curve $$y=\frac 13 \sqrt{x}(3-x)$$ is rotated around the $x$-axis. Find the surface area of the surface generated between the $x$-coordinates $1$ and $3$.
+> 
+> $$\frac {dy}{dx}=\frac12 x^{-\frac12}-\frac12 x^{\frac12}$$
+> 
+> $$\left(\frac {dy}{dx}\right)^2=\frac14 x^{-1}-\frac12+\frac14x$$
+> 
+> $$S_x=2\pi\int(\frac13\sqrt{x}(3-x))\sqrt{1+\left(\frac{dy}{dx}\right)^2}dx$$
+> $$S_x=\pi\int(\frac13\sqrt{x}(3-x))\sqrt{x^{-1}+x+2}\ dx$$
+> $$S_x=\pi\int(\frac13\sqrt{x}(3-x))\sqrt{(x^{\frac12}+x^{-\frac12})^2}\ dx$$
+> $$S_x=\pi\int(\frac13\sqrt{x}(3-x))(x^{\frac12}+x^{-\frac12})\ dx$$
+> $$\frac13 \pi \left[x^2+3x-\frac13x^3\right]^3_1$$
+> $$=\frac13 \pi\left([9+9-9]-[1+3-\frac13]\right)$$
+> $$=\frac13 \pi(5+\frac13)$$
+> $$=\frac{16}{9}\pi$$
+> $$=\frac{16}{9}\pi$$
+
+## Parametric Case
+$$x = t - \sin t$$
+$$y = 1 - \cos t$$
+$$t\in[0,2\pi]$$
+
+$$\frac {dx}{dt} = 1 - \cos t$$
+$$\frac {dy}{dt} = \sin t$$
+
+$$S_x=2\pi\int y\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\ dt$$
+$$\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2=1-2\cos t + \cos^2 t+\sin^2 t$$
+$$\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2=2(1-\cos t)$$
+$$S_x=\pi2\sqrt{2}\int (1-\cos t)^{\frac32}\ dt$$
+$$S_x=\pi2\sqrt{2}\int (1-(1-2\sin^2{\frac12 t}))^{\frac32}\ dt$$
+$$S_x=\pi2\sqrt{2}\int (2\sin^2{\frac12 t})^{\frac32}\ dt$$
+$$S_x=8\pi\int \sin^3{\frac12 t}\ dt$$
+$$S_x=8\pi\int \sin{\frac12 t}(1-\cos^2{\frac t 2})\ dt$$
+$$S_x=8\pi\int \sin{\frac12 t}-\sin{\frac12 t}\cos^2{\frac t 2})\ dt$$
+$$[S_x]_0^{2\pi}=8\pi\left[-2\cos{\frac t 2}-\frac23cos^3\frac{t}{2}\right]^{2\pi}_0$$
+$$=8\pi[2+\frac23+2+\frac23]$$
+$$=8\pi[\frac{16}3]$$
+$$=\frac{128}{3}\pi$$

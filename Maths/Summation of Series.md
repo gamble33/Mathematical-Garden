@@ -41,7 +41,7 @@ $$2n^2+3n+1=(2n+1)(n+1)$$
 $$\therefore\sum^n_{r=1}{r^2}=\frac{1}{6}n(2n+1)(n+1)$$
 ## The sum of the first $n$ cubes ($\sum^n_{r=1}{r^3}$)
 
-$$\sum^n_{r=1}{n^3}=\frac{1}{4}n^2(n+1)^2$$
+$$\sum^n_{r=1}{r^3}=\frac{1}{4}n^2(n+1)^2$$
 > [!Note]
 > $$\sum^n_{r=1}{r^3}=\left(\sum^n_{r=1}{r}\right)^2$$
 
