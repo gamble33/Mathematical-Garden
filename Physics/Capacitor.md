@@ -9,6 +9,23 @@ $$V=\frac{Q}{C}$$
 $$Q=CV$$
 $$E=\frac{1}{2}\frac{Q^2}{C}$$
 $$E=\frac{1}{2}CV^2$$
+
+# Capacitor Equations during Discharge
+$$Q=Q_0e^{-\frac t{CR}}$$
+where:
+* $Q$ is the charge after time $t$
+	* This is the measure of charge at the (negative) terminal of the capacitor
+* $Q_0$ is the initial charge at time $t=0$
+* $t$ is time ($s$) after the switch has been flipped, and the capacitor begins to discharge.
+
+$$I=I_0e^{-\frac t{CR}}$$
+$$V=V_0e^{-\frac t{CR}}$$
+
+> [!Side Note]
+> For charging a capacitor, the formula is
+> $$Q=Q_0\left(1-e^{-\frac{t}{RC}}\right)$$
+
+
 ## Uses
 - Smoothing out [[Voltage|voltages]] in sensitive circuits.
 - Short term back-up supply voltages (e.g., to give enough time for a PC to save its state when power is cut).
