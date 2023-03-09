@@ -1,0 +1,3 @@
+A cross-language, **cross-platform** application programming interface specification for rendering 2D and 3D vector **graphics**. The **API** is typically used to interact with a [[GPU|graphics processing unit (GPU)]], to achieve hardware-accelerated rendering.
+
+The manufacturers of graphics cards such as Nvidia implement the OpenGL specification themselves. Thus, the **implementations** of OpenGL tend to be **closed-sourced**.
