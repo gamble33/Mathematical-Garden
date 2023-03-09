@@ -31,3 +31,11 @@ The EMF induced is such to oppose the change of relative displacement causing it
 > $N=1$ because the aeroplane can be considered to be a wire with a single loop.
 > $$\varepsilon = -N\frac{\Delta \Phi}{\Delta t}=-\frac{BA}{\Delta t}=-\frac{Blv\Delta t}{\Delta t}=-Bvl$$
 > $$\varepsilon=5.2\times10^{-5}\times300\times20$$
+
+# Magnetic Forces
+The force on a charged particle moving at right angles to magnetic field is given by
+$$F=Bqv$$
+The centripetal force is given by 
+$$F=\frac{mv^2}{r}$$
+$$\implies Bqv = \frac{mv^2}{r}$$
+$$$$
