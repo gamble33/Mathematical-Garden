@@ -189,6 +189,8 @@ This implies $k$ has an upper bound of $1$.
 $$\frac25 \leq k \leq 1$$
 ```
 
+
+```ad-example
 ![[Pasted image 20230501154131.png]]
 The $3\ kg$ particle must be able to catch up to the $2\ kg$ particle in order for a collision to occur.
 $$u_2\gt2$$
@@ -196,3 +198,71 @@ $v_2$ must be less than $4$. If $v_2$ was greater than $4$, then the collision w
 $$v_2\leq4$$
 $$0 \leq e \ \leq 1$$
 $$e=\frac{4-v_2}{}$$
+```
+
+```ad-example
+Two balls P and Q have masses 3𝑚 and 4𝑚 respectively. They are travelling in opposite directions towards each other along the same straight line on a smooth level floor. Immediately before they collide, P has a speed 3𝑢 and Q has a speed 2𝑢. The coefficient of restitution between P and Q is 𝑒. Given that the direction of motion of P is unchanged, find the range of possible values of 𝑒 (You may model the balls as smooth spheres).
+
+![[Momentum & Impulse 2023-05-01 16.08.25.excalidraw]]
+$$9mu-8mu=3mv_P+4mv_Q$$
+$$u=3v_P+4v_Q$$
+$$e=\frac{v_Q-v_P}{3u-(-2u)}=\frac{v_Q-v_P}{5u}$$
+$$5eu=v_Q-v_P$$
+$$20eu=u-3v_P-4v_P$$
+$$u(20e-1)=-7v_P$$
+$$u(1-20e)=7v_P$$
+$$e=\frac1{20}-\frac {7v_P}{20u}$$
+$$e=\frac{\frac{7v_Q}{u}-1}{15}$$
+$$v_P \gt 0 \implies 0 \leq e \leq \frac 1 {20}$$
+```
+
+# Hitting a Wall
+The collision with a wall is treated the same way it is treated between two particles with the exception that the second particle is considered to be stationary before and after the collision.
+
+Consequently, the new formation of $e$ becomes,
+$$e=\frac{\text{speed of rebound}}{\text{speed of approach}}$$
+```ad-warning
+When colliding with a smooth wall, impulse can only be delivered perpendicular to the wall.
+```
+
+```ad-note
+You might also have to use $sv_0v_1at$ equations to find the speed immediately before impact - particularly with particles moving in a vertical line.
+```
+
+**Problem Solving Example**
+
+A ball is dropped from a height $h\ m$. The coefficient of restitution between the wall and the ground is $e$. What is the total distance travelled by the ball before it comes to rest permanently.
+
+$s=-h$
+$u=0$
+$v=v$
+$a=-10$
+$t=t$
+
+$$v^2=u^2+2as$$
+$$v=\sqrt{20h}$$
+
+$$e=\frac{v_1}{\sqrt{20h}}$$
+$$v_1=e\sqrt{20h}$$
+$s=h_1$
+$u=e\sqrt{20h}$
+$v=0$
+$a=-10$
+$t=t$
+$$h_1=-\frac{u^2}{2a}$$
+$$h_1=-\frac{e^220h}{-20}$$
+$$h_1=e^2h$$
+$$e=\frac{v_2}{e\sqrt{20h}}$$
+$$v_2=e^2\sqrt{20h}$$
+$s=h_2$
+$u=e^2\sqrt{20h}$
+$v=0$
+$a=-10$
+$t=$
+$$v^2=u^2+2as$$
+$$s=\frac{e^420h}{20}=e^4h$$
+The maximum height reached after each bounce follows the geometric sequence 
+$$H_n=(e^2\times h)[e^{2}]^{n-1}$$
+$$\implies \sum^\infty_{r=1}(e^2\times h)[e^{2}]^{r-1}=\frac{he^2}{1-e^2}$$
+$$\implies \text{total displacement from bounces}=\frac{2h}{1-e^2}$$
+$$\text{total displacement} = \frac{2h}{1-e^2}+h$$
