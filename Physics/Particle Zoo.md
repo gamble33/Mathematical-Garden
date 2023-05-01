@@ -116,9 +116,17 @@ By Einstein's theory of relativity, when accelerating mass near the speed of lig
 > > c) $$E=mc^2\implies m=\frac E{c^2}=\frac{4\times10^6\times1.6\times10^{-19}}{(3\times10^8)^2}=7.11\times10^{-30}\ kg$$
 > > 
 > > d) 
-> > > i) ?
+> > > i) negative kaon (2 quarks) -> Meson
+> > > omega minus (3 quarks) -> Baryon
 > > 
-> > > ii) ?
+> > > ii) $$K^- + p^+ \rightarrow K^+ + K^0 + \Omega^-$$
+> > >
+> > > |   | K |  |
+> > > | - | - | - |
+> > > | Q |   |   |
+> > > | B |   |   |
+> > > | L |   |   |
+> > > 
 > >
 > > > iii) ?
 > >
@@ -135,7 +143,7 @@ By Einstein's theory of relativity, when accelerating mass near the speed of lig
 > > c)
 > > > i)
 > > 
-> > > ii)
+> > > ii) ![[Particle Zoo 2023-03-14 18.16.40.excalidraw]]
 > > 
 > > > iii)
 > > 
@@ -145,3 +153,4 @@ By Einstein's theory of relativity, when accelerating mass near the speed of lig
 > > 
 > > > vi)
 ```
+

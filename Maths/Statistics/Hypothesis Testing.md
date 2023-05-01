@@ -82,3 +82,80 @@ To **incorrectly** <u>accept</u> $H_0$ is known as a **Type II Error**
 5.  State conclusion. Address:
 	1. Is result **significant or not**?
 	2. What are the implications in terms of context of original problem
+
+# Selecting a Hypothesis Test
+```mermaid
+graph LR
+	i0("Do we know a model for the population distribution?") -->|"yes"| i1("do we know the\nparameters of the model?")
+	i1 -->|"yes"| s0("derive test statistic from\nthe sample. (this is generally\n a sample mean or a\nfrequency of success).")
+ subgraph sample testing
+ s0 --> s1("compare this test statistic\nto the critical value.")
+ end
+ 
+
+	i0 -->|"maybe"| c0("are we testing\nindependence of\nbi-variate data?")
+	subgraph Chai-Squared Testing
+	 c0 -->|"no"| c3("are the parameters\nof the model being tested known?")
+	 c3 -->|"no"| c5("estimate parameters using\nthe data.")
+	 c5 --> c4
+	 c3 -->|"yes"| c4("calculate the expected\nfrequencies based on the\nmodel.")
+	 c4 --> c6("are any expected frequencies\nless than 5?")
+	 c6 -->|"yes"| c7("group frequencies\ntogether.")
+	  c6 -->|"no"| c8("calculate degrees of freedom, v.\nv=cells-constraints.\nconstraints can be:\n- estimated parameters\n- total number of values")
+	  c7 --> c8
+   c8 --> c2
+   c2 --> c9("compare to critical value\n(found on the lookup table)\nand make conclusion.")
+	c0 -->|"yes"| c1("calculate estimated frequencies\n based on the relative frequencies \nof the subgroups\nthe degrees of freedom, v, equals\n(r-1)(c-1)")
+	c1 --> c2("calculate a goodness of fit measurement:\n(X^2=\sum \frac{O_i^2}{E_i} - N)")
+	end
+
+	i1 -->|"no"| i2("do we know the\nvariance of the sample?\n\n(we will generally\nbe testing for the\nmean.)")
+	subgraph inferential statistics
+	i2 -->|"yes"| i11("how many samples?")
+	
+	i11 -->|"1 sample"| i3("use sample mean\nand assumed population\nmean to calculte z-score.\n$z=\frac{\overline{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}$")
+	 i11 -->|"2 paired samlpes"| i12("measure the difference\nbetween pairs.")
+	 i12 --> i3
+	  i11 -->|"2 unpaired samples"| i13("$z=\frac{\overline{x}-\overline{y}-\mu_d}{\sqrt{\frac{\sigma_x^2}{n_x}+\frac{\sigma_y^2}{n_y}}}$")
+	  i13 --> i8
+	 
+	 i2 -->|"no"| i4("how large is the sample?")
+	 i4 -->|"<25"| i5("sample variance\nis biased estimator\nfor population varaince.")
+	 i5 --> i20("how many samples?")
+	 
+	 i20 -->|"1 sample"| i9("use sample mean\nand assumed population\nmean to calculte t-score.\n$t=\frac{\overline{x}-\mu_0}{\frac{S_n}{\sqrt{n}}}$")
+	 i20 -->|"2 paired sample"| i21("find the mean of the differences & sample variance of differences")
+	 i20 -->|"2 unpaired samples"| i23("added condition is\nthat we must assume\nthe samples come from\nthe same population.\ntherefore, we use\na combined sample\nvariance as an\nestimator.\n$t=\frac{(\overline{x}-\overline{y})-\mu_d}{S_c\sqrt{\frac{1}{n_x}+\frac{1}{n_y}}}$")
+	  i23 --> i10
+	 i21 --> i9
+	 i9 --> i10("use t-test\nas lookup table.")
+	 i4 -->|">=25"| i15("how many samples?")
+	 i15 -->|"2 unpaired samples"| i16("$z=\frac{\overline{x}-\overline{y}-\mu_d}{\sqrt{\frac{S_x^2}{n_x}+\frac{S_y^2}{n_y}}}$")
+	 i16 --> i8
+	 i15 -->|"2 paired samples"| i17("measure differences")
+	 i17 --> i6
+	 i15 -->|"single sample"| i6("sample variance\nis an appropriate estimator\nfor population variance.")
+	 i6 --> i7("use sample mean\nand assumed population\nmean to calculte z-score.\n$z=\frac{\overline{x}-\mu_0}{\frac{S_n}{\sqrt{n}}}$")
+	 i7 --> i8("use normal distribution\nas lookup table.\nusinzg calculted z-score.")
+	 i3 --> i8
+	end
+ 
+	
+	i0 -->|"no"| id3("if we don't know the population distribution, \n we cannot test for any parametric value. \n However, we can test for non parametric values.")
+	subgraph non-parametric tests
+	id3 --> id4("are the sample(s) thought to be symmetric?")
+ 
+	id4 -->|"yes (this is preferable\nbecause it takes magnitude of \ndifferences into account)"| id10("how many samples are there?")
+	id10 -->|"single sample"| id11("assume a centile,\ne.g., the median.")
+	id10 -->|"two paired samples"| id12("measure difference between them.")
+	id10 -->|"two unpaired samples"| id13("perform wilcoxon signed rank test\n- use lookup table")
+	id11 --> id14("perform a wilcoxon signed rank test\n- use lookup table")
+	id12 --> id14
+ 
+	id4 -->|"no"| id6("are there 2 paried samples?")
+	id6 -->|"no"| id5("the hypothesis is an assumed centile.\ne.g., median")
+	id6 -->|"yes"| id8("measure the difference between\nthem and assume the difference is zero.")
+	id5 --> id9("perform a sign test\nusin a binomial distribution\nfor the test statistic.")
+	 id8 --> id9
+	 end
+```

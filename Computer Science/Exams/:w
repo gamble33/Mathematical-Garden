@@ -1,0 +1,187 @@
+# 1
+## a
+### i
+The program will compile or be interpreted succesfully. The code could be executed, however, it may contain logic(al) errors and it may have unintended functionlity. It will stil be executed though. The grammar of the language was followed correctly. There aren't any errors such as missing curly braces or anything.
+
+### ii
+Type of error: Logic error
+
+Description: The program will execute however it will result in unintended functionality due to incorrect logic. For example, an infinite loop may occur due to an impossible termination condition.
+
+## b
+| Use of variable | Data type |
+| ---             |    ---    |
+| Average mark    | Real      |
+| email address   | String    |
+| n. of students  | Integer   |
+| indicate wheter | Boolean   |
+
+## c
+### i
+| Info | Essential | Not Essential |
+| ---  | ---       |  ---          |
+| dep  |    x      |               |
+| f  n |           |       x       |
+| d air|    x      |               |
+| a t  |           |       x       |
+| $    |    x      |               |
+| n. s |           |       x       |
+
+### ii 
+// TODO
+Technique: 
+
+### iii
+1. Expected Flight Time
+2. Arrival Airport
+
+# 2
+## a
+Given a 1D array, $\alpha$, with length $n$ and first element $\alpha[0]$:
+
+declare and initialize a variable, $\text{largest}=-\infty$.
+declare a variable, $\text{largestIndex}$.
+Use an outer for loop with counter variable $x$ to loop $n$ times.
+Within the outter loop, $\text{largest}$ should be set to $0$.
+Use an inner for loop with counter variable $y$ to loop through the array from index $0$ to index $n-1$ (last element) (thus, the inner for loop also does $n$ iterations).
+For each element in the array compare it against the value of $\text{largest}$. If value $\alpha[y]$ is greater than $\text{largest}$, then set $\text{largest}$ to $\alpha[y]$ and set $\text{largestIndex}$ to $y$.
+
+After the end of the inner for loop, stil within the outer loop, the value at index $n-1$ (last element) should be replaced with the value at $\alpha[\text{largestIndex}]$.
+
+## b
+```fortran
+DECLARE Count : INTEGER
+DECLARE Flag : BOOLEAN
+
+Count <- 0
+Flag <- FALSE
+
+WHILE (Flag = FALSE) AND (Count <= 5)
+    ReBoot()
+    Count <- Count + 1
+    Flag <- Check()
+ENDWHILE
+
+IF Flag = FALSE then
+    Alert(27)
+ENDIF
+```
+
+# 3
+## a
+### i
+The value at index of 
+$$\text{end of queue pointer}+1=4$$
+is checked,
+if this index is greater than $7$, then it will check the index of 
+$$\text{whatever that index was}-8$$
+In this case, the next free index is $4$ which is lower than $7$, thus, the value `"Octopus"` is inserted in index $4$ of the ADT.
+
+### ii
+The value at `front of queue pointer` is deallocated/removed. the `front of queue pointer` is incremented by $1$. If the incremented value is greater than $7$, then the `front of queue pointer` will be set to $8 - \text{incremented value}$ (in order to maintain the circular nature of the queue).
+
+### iii
+The queue contains one element.
+
+## b
+### i
+| 0 |      |
+|---|---   |
+| 1 |      |
+| 2 | Fish |
+| 3 | Elk  |
+| 4 | Wasp |
+| 5 | Bee  |
+| 6 | Mouse|
+| 7 |      |
+
+### ii
+| 0 | Shark `end` |
+|---|---   |
+| 1 | Cat  |
+| 2 | Fish |
+| 3 |      |
+| 4 | Wasp `front` |
+| 5 | Bee  |
+| 6 | Mouse|
+| 7 | Dolphin  |
+
+## c
+End of queue is incremented.
+If the incremented value is greater than $7$ (last index of array), then the value at $8 - \text{incremented value}$ should be considered in order to maintain the circular nature of this ADT. If the contents at the calculated index are not free, then the ADT has reached its maximum size (it is full) and will not store any more items. Attempting to store data at an index which stores data which is part of the ADT could result in a runtime error. Otherwise, it is overwriting data part of the ADT which is a logical error.
+
+# 4
+## b
+| Test | Value | Explanation   | Expected outcome  |
+| ---- | ----- | ------------- | ----------------- |
+| 1    | 23    | Normal Data   | Data accepted     |
+| 2    | 40    | Extreme Data  | Data accepted     |
+| 3    | 41    | Boundary Data | Data not accepted |
+| 4    | 0     | Extreme Data  | Data accepted     |
+| 5    | "20"  | Abnormal Data | Data not accepted |
+
+## b
+![[9618_w21_qp_23 2023-03-14 11.10.37.excalidraw]]
+
+# 5
+## a
+Character: `~` (tilde)
+Reason: it is insanley unlikely that it would be used in the studentid, hostid or time and date.
+
+## b
+Analysis stage
+
+## c
+```fortran
+FUNCTION LogEvents(StudentID : STRING) RETURNS INTEGER
+
+    DECLARE LogFile : File
+    DECLARE Count : INTEGER
+
+    LogFile <- OPEN("LogFile.txt") FOR WRITE
+    Count <- 0
+
+    FOR i <- 1 TO 2000
+        IF StudentID = LEFT(LogArray[i], "6") then
+            WRITE(LogFile, LogArray[i]
+            LogArray[i] <- ""
+            Count <- Count + 1
+        ENDIF
+    NEXT i
+
+    CLOSE(LogFile)
+
+    RETURN Count
+
+ENDFUNCTION
+```
+
+# 6
+I understood and am using `Screen` where `Screen[y][x]` represents the $y^{
+    \text{th}}$ row and $x^{\text{th}}$ column.
+## a
+```fortran
+PROCEDURE SetRow(Row : INTEGER, Skip : INTEGER, Amount : INTEGER)
+    FOR i <- 1 TO Amount
+       Screen[Row][Skip + i] <- 1 
+    NEXT i
+ENDPROCEDURE
+```
+
+## b
+```fortran
+FUNCTION SearchInRow(Row : INTEGER, StartColumn : INTEGER) RETURNS INTEGER
+    DECLARE i : INTEGER
+    DECLARE d : INTEGER
+    i <- StartColumn
+
+    IF StartColumn = 1280 then
+        d <- -1
+    ELSE
+        d <- 1
+    ENDIF
+
+    WHILE i > 0 AND i < 1280
+        IF Screen[Row][]
+ENDFUNCTION
+```

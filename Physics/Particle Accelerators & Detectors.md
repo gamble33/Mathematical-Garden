@@ -14,6 +14,20 @@ $$Bq=\frac{mv}{r}$$
 $$r=\frac{p}{Bq}$$
 
 # Cyclotron
+
+## How are particles accelerated
+• Magnetic field perpendicular to velocity of particles 
+
+• Magnetic force on particles perpendicular to velocity 
+
+• Particles experience centripetal acceleration/force so they undergo circular motion 
+
+• Alternating potential difference between dees changes direction while particle in dees 
+
+• Particle accelerated by electric field between dees 
+
+• (Electric) field in correct direction so that force on particle further increases speed
+
 ```ad-resources
 [What is a cyclotron?](https://www.youtube.com/watch?v=unydXO6Yenw)
 

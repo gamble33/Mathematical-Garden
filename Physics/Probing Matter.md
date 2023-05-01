@@ -44,7 +44,7 @@ We can not use light to look at a nucleus as it is too small.
 According to de Broglie, all matter has a wavelength defined by:
 $$\lambda=\frac{h}{mv}$$
 
-The wavelength of visible light is too great to be useful for observing the structure of an atom. Therefore, high velocity electrons are used which have a lower wavelength. The electron's diffraction is observed. Thus, the space in the atom must be of a similar size to the wavelength of the high-energy electron.
+The wavelength of visible light is too great to be useful for observing the structure of an atom. Therefore, high velocity electrons are used which have a lower wavelength. The electron's diffraction is observed. Thus, the space in the atom must be of a similar size to the wavelength of the high-energy electron or diffraction will not occur.
 
 ```ad-example
 a) Calculate the momentum of electrons with a de Broglie wavelength of $0.11\ nm$

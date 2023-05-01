@@ -15,3 +15,6 @@ Lookout for keywords like **must**
 > [!Example]
 > The mark-scheme for this question required input validation.
 >  ![[Pasted image 20230131125311.png|800]]
+
+# Calling Functions
+When calling a function, always **store the return value**.

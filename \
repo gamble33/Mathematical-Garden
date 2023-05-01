@@ -1,0 +1,30 @@
+```ad-notation
+A function, $f(x)$, with a superscript $n$ refers to the $n^{\text{th}}$ derivative of $f(x)$.
+
+i.e.,
+$$f^{(m)}(x)\equiv\frac{d^m\left[f(x)\right]}{dx^m}$$
+$$f^{(0)}(x)\equiv f(x)$$
+
+The following notation will also be used:
+$$f'(x)\equiv\frac{d\left[f(x)\right]}{dx}$$
+```
+
+$$\frac{d^n}{dx^n}f(x)g(x)=\sum^n_{k=0}\left(\begin{matrix}n\\k\end{matrix}\right)f^{(n-k)}(x)g^{(k)}(x)$$
+
+Basis
+---
+First, a proof from first principles that $\frac{d}{dx}f(x)g(x)=f(x)+g(x)$.
+$$\frac{d}{dx}f(x)g(x)=\lim_{h \to 0}\left[\frac{f(x+h)g(x+h)-f(x)g(x)}{(x+h)-x}\right]$$
+$$=\lim_{h \to 0}\left[\frac{f(x+h)g(x+h)-f(x)g(x)}{h}\right]$$
+
+For $n=1$,
+
+$$\frac{d}{dx}f(x)g(x)=\sum^1_{k=0}\left(\begin{matrix}1\\k\end{matrix}\right)f^{(1-k)}(x)g^{(k)}(x)$$
+
+$$=
+\left(\begin{matrix}1\\0\end{matrix}\right)f^{(1)}(x)g^{(0)}(x) +
+\left(\begin{matrix}1\\1\end{matrix}\right)f^{(1-1)}(x)g^1(x)
+$$
+
+$$=f(x) + g(x)$$
+

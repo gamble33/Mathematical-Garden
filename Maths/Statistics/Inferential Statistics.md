@@ -1,3 +1,13 @@
+```ad-summary
+|                                                                 | 1                                                      | 2P                                                                   | 2UP                                                                                                                                                                               |
+| --------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $\sigma\space\text{is known}$                                   | $$Z=\frac{\overline{x}-\mu}{\frac{\sigma}{\sqrt{n}}}$$ | $$Z/t=\frac{\overline{(x-y)}-\mu_d}{\frac{S_d}{\sqrt{n}}}$$ | $$Z=\frac{\overline{x}-\overline{y}-\mu_d}{\sqrt{\frac{\sigma_x^2}{n_x}+\frac{\sigma_y^2}{n_y}}}$$                                                                                |
+| $\sigma\space\text{is not known}$, $S\space\text{used instead}$ | $$Z/t=\frac{\overline{x}-\mu}{\frac{S}{\sqrt{n}}}$$    | $$Z/t=\frac{\overline{(x-y)}-\mu_d}{\frac{S_d}{\sqrt{n}}}$$ | $$Z=\frac{\overline{x}-\overline{y}-\mu_d}{\sqrt{\frac{S_x^2}{n_x}+\frac{S_y^2}{n_y}}}$$ $$t=\frac{\overline{x}-\overline{y}-\mu_d}{\sqrt{\frac{S_c^2}{n_x}+\frac{S_c^2}{n_y}}}$$ |
+
+```
+
+
+
 # Definitions
 ```ad-definition
 A **statistic** is a value based on a sample.
